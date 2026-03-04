@@ -26,7 +26,7 @@ interface Stock {
 }
 
 // Initializing with Tier 1 Key from your Vercel Environment Variables
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || "" });
 
 export default function App() {
   const [stocks, setStocks] = useState<Stock[]>([]);
